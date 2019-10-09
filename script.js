@@ -1,6 +1,9 @@
 firstArray = [[true, true, true],[true, true, false],[false, false, true]];
 firstTable = document.getElementById('premierTableau');
 
+zigzag = [[false, true],[true, false],[false, true],[true, false]];
+secondTable = document.getElementById('deuxiemeTableau');
+
 function drawTable (table, htmlId) {
     for (let array in table) {
         const newColumn = document.createElement('div');
@@ -20,13 +23,8 @@ function drawTable (table, htmlId) {
     }
 }
 
-drawTable(firstArray, firstTable);
-
-zigzag = [[false, true],[true, false],[false, true],[true, false]];
-secondTable = document.getElementById('deuxiemeTableau');
-
 function largeurImage(array) {
-    largeur = 0
+    let largeur = 0
 
     for (let index in array){
         largeur++
@@ -34,13 +32,15 @@ function largeurImage(array) {
     console.log("Largeur : " + largeur);
 }
 function hauteurImage(array) {
-    hauteur = 0
+    let hauteur = 0
 
     for (let block in array[0]){
         hauteur++
     }
     console.log("Hauteur : " + hauteur);
 }
+
+drawTable(firstArray, firstTable);
 drawTable(zigzag, secondTable);
 largeurImage(zigzag);
 hauteurImage(zigzag);
