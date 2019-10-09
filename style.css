@@ -1,0 +1,16 @@
+#premierTableau, #deuxiemeTableau {
+    width: 9em;
+    height: 9em;
+    display: flex;
+    margin-bottom: 1em;
+}
+
+.myColumns {
+    width: 3em;
+}
+
+.myColumns div {
+    width: 3em;
+    height: 3em;
+    border: solid thin black;
+}
